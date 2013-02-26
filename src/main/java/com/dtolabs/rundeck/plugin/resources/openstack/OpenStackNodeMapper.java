@@ -50,7 +50,7 @@ public class OpenStackNodeMapper
     
     protected String getHostname(Server server) {
         if (server.getAccessIPv4() != null) {
-            return server.getAccessIPv4() + ":" + sshPort; 
+            return server.getAccessIPv4(); 
         }
         if (server.getAddresses() == null || server.getAddresses().isEmpty()) {
             return null;
